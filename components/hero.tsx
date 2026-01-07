@@ -90,7 +90,7 @@ export default function Hero() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-lg mx-auto">
               {/* Phone mockup placeholder */}
               <div className="relative aspect-[9/19] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-3xl" />
@@ -98,7 +98,7 @@ export default function Hero() {
                   <img
                     src="/financial-dashboard-balance-overview.jpg"
                     alt="Benchies App Dashboard"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>

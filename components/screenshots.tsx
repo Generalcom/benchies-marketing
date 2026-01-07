@@ -98,11 +98,11 @@ export default function Screenshots() {
               {screenshots.map((screenshot, index) => (
                 <div key={index} className="min-w-[100%] sm:min-w-[50%] lg:min-w-[33.333%] px-4">
                   <button onClick={() => openLightbox(index)} className="block w-full group cursor-pointer">
-                    <div className="relative aspect-[9/16] max-w-[280px] mx-auto bg-gray-900 rounded-3xl border-8 border-gray-800 shadow-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                    <div className="relative aspect-[9/16] max-w-[400px] mx-auto bg-gray-900 rounded-3xl border-8 border-gray-800 shadow-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
                       <img
                         src={screenshot.image}
                         alt={screenshot.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <p className="text-center mt-4 font-semibold text-black">{screenshot.title}</p>
@@ -171,12 +171,12 @@ export default function Screenshots() {
             <ChevronLeft className="w-8 h-8" />
           </Button>
 
-          <div className="max-w-md w-full">
+          <div className="max-w-lg w-full">
             <div className="relative aspect-[9/16] bg-gray-900 rounded-3xl border-8 border-gray-800 overflow-hidden">
               <img
                 src={screenshots[lightboxIndex].image}
                 alt={screenshots[lightboxIndex].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <p className="text-center mt-6 text-xl font-semibold text-white">{screenshots[lightboxIndex].title}</p>

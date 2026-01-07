@@ -100,11 +100,11 @@ function FeatureCard({
           <div className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-8`}>
             {/* Image */}
             <div className="w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-8 md:p-12">
-              <div className="relative w-full max-w-[280px] aspect-[9/16] bg-white rounded-3xl shadow-lg overflow-hidden">
+              <div className="relative w-full max-w-[400px] aspect-[9/16] bg-white rounded-3xl shadow-lg overflow-hidden">
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
