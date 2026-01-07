@@ -7,11 +7,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === "production" 
-    ? `/${process.env.CI_PROJECT_PATH_SLUG || process.env.CI_PROJECT_NAME || "v0-benchies-marketing-website"}`
+  basePath: process.env.NODE_ENV === "production" && process.env.GITHUB_REPOSITORY
+    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}`
     : "",
-  assetPrefix: process.env.NODE_ENV === "production"
-    ? `/${process.env.CI_PROJECT_PATH_SLUG || process.env.CI_PROJECT_NAME || "v0-benchies-marketing-website"}/`
+  assetPrefix: process.env.NODE_ENV === "production" && process.env.GITHUB_REPOSITORY
+    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
     : "",
 }
 
